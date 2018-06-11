@@ -6,7 +6,10 @@ describe('Search', function () {
     it('Search for cypress-io/cypress-cli that exists', () => {
         cy.searchInSearchComponent('cypress-io');
         cy.searchInResults('cypress-io/cypress-cli');
-        cy.validateProjectPage();
+        cy.validateNumberOfTabs();
+        cy.validateWatchButton();
+        cy.validateReadmeFileOpened();
+        cy.validateStarButton();
     });
 
     afterEach(() => {
